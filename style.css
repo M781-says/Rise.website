@@ -1,78 +1,74 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&display=swap');
-body { background: black  !important; }
+
+/* خلفية الموقع */
 body {
-  background: #f6fafd;
+  background: #f7f9fa;
   color: #232946;
   font-family: 'Cairo', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.8;
+  line-height: 1.7;
 }
 
 /* شريط التنقل */
 nav {
-  background: #232946;
+  background: #161a2d;
   padding: 18px 0;
   box-shadow: 0 2px 16px #0001;
   text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 99;
 }
 
 nav a {
-  color: #fffffe;
-  margin: 0 16px;
+  color: #fff;
+  margin: 0 20px;
   padding: 10px 18px;
   text-decoration: none;
   font-weight: 700;
-  border-radius: 8px;
-  transition: background 0.2s, color 0.2s;
+  border-radius: 6px;
   font-size: 1.1em;
+  letter-spacing: 1px;
+  transition: background 0.2s, color 0.2s;
 }
-nav a:hover {
+nav a:hover, nav a.active {
   background: #eebbc3;
   color: #232946;
 }
 
-/* العناوين */
-h1, h2, h3, h4 {
-   color: #232946;
+h1, h2, h3 {
+  color: #232946;
   font-family: 'Cairo', Arial, sans-serif;
   font-weight: 700;
 }
 
-/* الكروت */
-.card {
+.section {
   background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 2px 16px #adb5bd33;
-  padding: 30px 22px;
-  margin: 30px auto;
-  max-width: 550px;
-  transition: box-shadow 0.2s;
-}
-.card:hover {
-  box-shadow: 0 4px 32px #adb5bd66;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px #23294610;
+  padding: 40px 22px;
+  margin: 40px auto 0;
+  max-width: 750px;
+  text-align: right;
 }
 
-/* الأزرار */
-.btn {
-  background: #eebbc3;
-  color: #232946;
-  border: none;
-  padding: 12px 34px;
-  border-radius: 8px;
+.section p {
+  font-size: 1.15em;
+  margin-bottom: 18px;
+}
+
+.emoji {
   font-size: 1.1em;
-  font-family: inherit;
-  font-weight: bold;
-  cursor: pointer;
-  margin: 12px 0;
-  transition: background 0.2s;
-}
-.btn:hover {
-  background: #d6d6e7;
-  color: #232946;
+  margin: 0 2px;
 }
 
-/* جدول للأعضاء */
+/* لمساحة بين الأقسام */
+.spacer {
+  height: 40px;
+}
+
+/* جدول للأعضاء (اختياري) */
 table {
   border-collapse: collapse;
   margin: 30px auto;
@@ -97,20 +93,15 @@ tr:last-child td {
   border-bottom: none;
 }
 
-hr {
-  border: none;
-  border-top: 2px solid #eebbc3;
-  margin: 32px 0;
-}
-
-@media (max-width: 600px) {
-  nav a {
-    display: block;
-    margin: 10px 0;
-  }
-  .card, table {
+@media (max-width: 700px) {
+  .section {
+    padding: 18px 6px;
     max-width: 98%;
-    padding: 12px !important;
+  }
+  nav a {
+    margin: 0 6px;
+    font-size: 1em;
+    padding: 8px 8px;
   }
   th, td {
     padding: 8px 5px;
