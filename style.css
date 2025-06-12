@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&display=swap');
-body { background: red !important; }
+body { background: black  !important; }
 body {
   background: #f6fafd;
   color: #232946;
@@ -34,7 +34,7 @@ nav a:hover {
 
 /* العناوين */
 h1, h2, h3, h4 {
-  color: #232946;
+   color: #232946;
   font-family: 'Cairo', Arial, sans-serif;
   font-weight: 700;
 }
